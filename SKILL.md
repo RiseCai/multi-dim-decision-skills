@@ -383,6 +383,7 @@ See [scripts/decision_helper.py](scripts/decision_helper.py)
 
 ## References
 
+- [落地语义体系](references/landing-semantics.md) - 价值链/产业链/供应链/研发流程落地指南
 - [九维决策维度表](references/dimension-table.md) - 完整数学化维度表
 - [决策案例库](references/case_studies.md) - 实际应用案例
 - [检查清单](references/checklists.md) - 各原则执行清单
