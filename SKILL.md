@@ -1,9 +1,114 @@
 ---
 name: multi-dim-decision
-description: Multi-dimensional decision-making framework for problem solving. Use when facing complex problems requiring structured analysis, needing to avoid repeated mistakes, wanting to break down large problems, or seeking to simplify and resolve issues efficiently. Implements four core principles including learn from one case and apply to many, adaptive strategy shift based on feedback signals, break big problems into small ones, and resolve small issues completely.
+description: Multi-dimensional decision-making framework for problem solving. Use when facing complex problems requiring structured analysis, needing to avoid repeated mistakes, wanting to break down large problems, or seeking to simplify and resolve issues efficiently. Implements strategic thinking (10-year vision, 3-year planning, 1-year execution), tactical thinking (four-generation product pipeline), and four core principles including learn from one case and apply to many, adaptive strategy shift based on feedback signals, break big problems into small ones, and resolve root cause completely.
 ---
 
 # 多维度决策思维技能
+
+## 战略思维与战术思维
+
+### 战略思维：看十年，想三年，干一年
+
+**核心思想：**
+在不同时间尺度上思考和行动，平衡长期愿景与短期执行。
+
+**三层时间尺度：**
+
+| 时间尺度 | 关注点 | 关键问题 | 行动重点 |
+|----------|--------|----------|----------|
+| **看十年** | 长期愿景 | 10年后想成为什么？行业趋势如何？ | 方向选择、能力储备 |
+| **想三年** | 中期规划 | 3年内要实现什么目标？路径是什么？ | 战略布局、资源配置 |
+| **干一年** | 短期执行 | 今年要交付什么成果？具体怎么做？ | 落地执行、快速迭代 |
+
+**应用示例：**
+```
+问题: CI构建不稳定
+
+看十年（长期）:
+  愿景: 建立工程化成熟度最高的Flutter团队
+  方向: 自动化、标准化、智能化
+
+想三年（中期）:
+  目标: 构建成功率99.9%，平均修复时间<1小时
+  路径: CI/CD流水线优化 → 监控告警体系 → 自愈系统
+
+干一年（短期）:
+  交付: 当前构建成功率提升到95%
+  行动: 修复现有问题 → 建立监控 → 规范流程
+```
+
+**与九维框架的关系：**
+- 看十年 → 维度5（抽象）：提炼长期规律
+- 想三年 → 维度8（约束满足）：评估可行性
+- 干一年 → 维度9（前置验证）：确保执行质量
+
+---
+
+### 战术思维：量产一代，研发一代，预研一代，规划一代
+
+**核心思想：**
+在产品/技术演进上保持梯队布局，确保持续竞争力。
+
+**四代梯队：**
+
+| 梯队 | 阶段 | 状态 | 资源投入 | 风险 |
+|------|------|------|----------|------|
+| **量产一代** | 当前主力 | 稳定运行 | 维护为主 | 低 |
+| **研发一代** | 即将发布 | 开发测试 | 重点投入 | 中 |
+| **预研一代** | 技术验证 | 原型探索 | 适度投入 | 高 |
+| **规划一代** | 概念阶段 | 方向研究 | 少量投入 | 极高 |
+
+**应用示例：**
+```
+问题: CI/CD系统演进
+
+量产一代（当前）:
+  状态: GitHub Actions + Flutter 3.16
+  投入: 维护稳定运行，修复紧急问题
+
+研发一代（进行中）:
+  目标: 自研构建平台，支持多环境并行
+  投入: 主力团队开发，预计3个月发布
+
+预研一代（验证中）:
+  方向: AI驱动的自动修复系统
+  投入: 小团队探索，验证技术可行性
+
+规划一代（概念）:
+  设想: 全链路DevOps智能化
+  投入: 跟踪行业趋势，储备技术能力
+```
+
+**与九维框架的关系：**
+- 规划一代 → 维度1（分类）：识别未来趋势
+- 预研一代 → 维度4（信息增益）：评估技术方向
+- 研发一代 → 维度7（回归）：预测发布成功率
+- 量产一代 → 维度9（前置验证）：确保稳定运行
+
+---
+
+## 综合决策框架
+
+```
+战略层（看十年，想三年，干一年）
+    ↓
+战术层（量产/研发/预研/规划四代）
+    ↓
+执行层（九维认知框架）
+    ↓
+    ├─ 维度1-3: 识别问题
+    ├─ 维度4-6: 分析推理
+    ├─ 维度7-8: 评估选择
+    └─ 维度9: 验证执行
+```
+
+**决策流程：**
+1. **战略定位：** 看十年定方向，想三年定目标，干一年定行动
+2. **战术布局：** 四代梯队确保持续演进
+3. **战术执行：** 九维框架确保单次决策质量
+4. **反馈闭环：** 执行结果反馈到战略和战术层
+
+---
 
 ## 核心原则
 
