@@ -1,6 +1,6 @@
 ---
 name: multi-dim-decision
-description: Multi-dimensional decision-making framework for problem solving. Use when facing complex problems requiring structured analysis, needing to avoid repeated mistakes, wanting to break down large problems, or seeking to simplify and resolve issues efficiently. Implements four core principles including learn from one case and apply to many, limit retries to three, break big problems into small ones, and resolve small issues completely.
+description: Multi-dimensional decision-making framework for problem solving. Use when facing complex problems requiring structured analysis, needing to avoid repeated mistakes, wanting to break down large problems, or seeking to simplify and resolve issues efficiently. Implements four core principles including learn from one case and apply to many, adaptive strategy shift based on feedback signals, break big problems into small ones, and resolve small issues completely.
 ---
 
 # 多维度决策思维技能
@@ -26,29 +26,77 @@ description: Multi-dimensional decision-making framework for problem solving. Us
 
 ---
 
-### 2. 事不过三 (No More Than Three)
+### 2. 事不过三 (Adaptive Strategy Shift)
 
-**含义:** 同一方法尝试不超过三次，第三次必须改变策略
+**目标:** 避免无效坚持，及时识别信号并改变策略
 
-**执行步骤:**
-1. **第一次尝试:** 直接方法
-2. **第二次尝试:** 优化调整
-3. **第三次尝试:** 彻底改变策略（换思路/工具/方案）
+**核心思想:**
+不是"试3次就停"，而是"观察信号，信号不对就换"。通过三个阶段的反馈循环，决定是继续优化还是彻底改变。
 
-**决策矩阵:**
+**三个阶段:**
 
-| 尝试次数 | 策略 | 如果失败 |
-|---------|------|---------|
-| 1 | 直接修复 | 记录问题，准备优化 |
-| 2 | 优化方案 | 分析根本原因，准备改变策略 |
-| 3 | 彻底改变 | 放弃当前路径，寻求替代方案 |
+#### 阶段1：探索 (Exploration)
+**行动:** 直接尝试最可能的解决方案
+**观察信号:**
+- ✅ 产生新信息 → 进入阶段2优化
+- ❌ 无新信息/完全失败 → 直接进入阶段3转型
+
+#### 阶段2：优化 (Optimization)
+**行动:** 基于阶段1的反馈调整方案
+**观察信号:**
+- ✅ 信息增益递减但仍有效 → 继续微调
+- ❌ 信息增益为零/无效 → 进入阶段3转型
+
+#### 阶段3：转型 (Transformation)
+**行动:** 彻底改变策略（换思路/工具/方案/目标）
+**触发条件:**
+- 阶段1完全失败
+- 阶段2信息增益为零
+- 同一维度尝试超过2次仍无效
+
+**决策流程图:**
+```
+开始
+  ↓
+阶段1：探索 ──→ 产生新信息？
+  ↓是              ↓否
+阶段2：优化      阶段3：转型
+  ↓
+信息增益 > 0？
+  ↓是              ↓否
+继续微调        阶段3：转型
+```
+
+**关键指标:**
+| 指标 | 阶段1 | 阶段2 | 阶段3 |
+|------|-------|-------|-------|
+| 新信息产生 | 必须有 | 递减可接受 | 重新定义问题 |
+| 信息增益(IG) | > 0.1 | > 0.05 | 重置IG |
+| 约束满足度(S) | 任意 | 提升中 | 重新评估 |
 
 **示例:**
 ```
-尝试1: 直接修改代码 → 失败
-尝试2: 添加类型转换 → 失败  
-尝试3: 重构数据结构 → 成功 ✅
+问题: CI构建失败
+
+阶段1-探索:
+  尝试: 直接修改代码
+  结果: 失败，但发现是类型错误
+  信号: ✅ 产生新信息 → 进入阶段2
+
+阶段2-优化:
+  尝试: 添加类型转换
+  结果: 仍失败，无新信息
+  信号: ❌ 信息增益为零 → 进入阶段3
+
+阶段3-转型:
+  改变: 不再修复代码，回退到稳定版本
+  结果: 成功 ✅
 ```
+
+**与信息增益(维度4)的关系:**
+- 阶段1 → 阶段2：IG > 0.1
+- 阶段2 → 阶段3：IG ≤ 0.05（连续2次）
+- 阶段3：重置IG，重新定义问题空间
 
 ---
 
